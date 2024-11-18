@@ -5,14 +5,22 @@ const ClickCounter = ({
   hover,
   incrementHover,
   theme,
+  switchTheme,
 }) => {
   const buttonClass = theme === "light" ? "btn-light" : "btn-dark";
+
+  // Combined handler for the onClick event
+  const handleClick = () => {
+    incrementCount();
+    switchTheme();
+  };
+
   return (
     <>
       <button
         type="button"
         className={buttonClass}
-        onClick={incrementCount}
+        onClick={handleClick}
         onMouseOver={incrementHover}
       >
         Clicked {count} times Hovered {hover} times

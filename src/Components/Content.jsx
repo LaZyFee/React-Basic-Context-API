@@ -9,13 +9,14 @@ export default function Content() {
       <Counter>
         {({ count, incrementCount, hover, incrementHover }) => (
           <ThemeContext.Consumer>
-            {({ theme }) => (
+            {({ theme, switchTheme }) => (
               <ClickCounter
                 count={count}
                 incrementCount={incrementCount}
                 hover={hover}
                 incrementHover={incrementHover}
                 theme={theme}
+                switchTheme={switchTheme}
               />
             )}
           </ThemeContext.Consumer>
