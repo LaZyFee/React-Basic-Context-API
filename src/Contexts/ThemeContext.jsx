@@ -1,4 +1,4 @@
-import createCustomContext from "../lib/Context";
+import { createContext } from "react";
 
-const ThemeContext = createCustomContext();
+const ThemeContext = createContext();
 export default ThemeContext;
